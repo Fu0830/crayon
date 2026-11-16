@@ -264,12 +264,52 @@
 
   /* ---------------- 推门 ---------------- */
 
+  /* ---------------- 背景音乐 ---------------- */
+
+  var bgm = null;
+
+  function startMusic() {
+    if (!bgm) bgm = document.getElementById('bgm');
+    if (!bgm) return;
+    bgm.volume = 0.62;
+    var p = bgm.play();
+    if (p && p.catch) p.catch(function () { setMusicBtn(false, true); });
+    setMusicBtn(true, true);
+  }
+
+  function setMusicBtn(playing, silent) {
+    var b = document.getElementById('bgmBtn');
+    if (!b) return;
+    b.classList.toggle('off', !playing);
+    b.setAttribute('aria-pressed', playing ? 'true' : 'false');
+    b.setAttribute('aria-label', playing ? '关掉音乐' : '打开音乐');
+    if (!silent && !playing) pauseMusic();
+  }
+
+  function pauseMusic() {
+    if (bgm) bgm.pause();
+    setMusicBtn(false, true);
+  }
+
+  function toggleMusic() {
+    if (!bgm) bgm = document.getElementById('bgm');
+    if (!bgm) return;
+    if (bgm.paused) {
+      var p = bgm.play();
+      if (p && p.catch) p.catch(function () {});
+      setMusicBtn(true, true);
+    } else {
+      pauseMusic();
+    }
+  }
+
   function enterShop() {
     var cover = $('#cover');
     if (cover.classList.contains('gone')) return;
     $('#doorSign').textContent = 'OPEN';
     cover.classList.add('opening');
     bell();
+    startMusic();
     setTimeout(function () {
       cover.classList.add('gone');
       $('#site').setAttribute('aria-hidden', 'false');
@@ -287,6 +327,14 @@
     root.style.setProperty('--accent', p.hex);
     root.style.setProperty('--accent-deep', p.deep);
     root.style.setProperty('--accent-soft', p.soft);
+    root.style.setProperty('--accent-rgb', p.rgb);
+    root.style.setProperty('--sky', p.sky);
+    root.style.setProperty('--sky-2', p.sky2);
+    root.style.setProperty('--sky-mid', p.skyMid);
+    root.style.setProperty('--bg-1', p.bg1);
+    root.style.setProperty('--bg-2', p.bg2);
+    root.style.setProperty('--bg-3', p.bg3);
+    root.style.setProperty('--font', p.font);
     $('#paletteName').textContent = p.name;
     $$('.swatch').forEach(function (b, idx) {
       b.classList.toggle('on', idx === accentIndex);
@@ -757,10 +805,20 @@
 
   /* ---------------- 事件绑定 ---------------- */
 
+  function bindAudioState() {
+    var el = document.getElementById('bgm');
+    if (!el) return;
+    el.addEventListener('play', function () { setMusicBtn(true, true); });
+    el.addEventListener('pause', function () { if (el.currentTime > 0) setMusicBtn(false, true); });
+  }
+
   function bind() {
     $('#enterBtn').addEventListener('click', enterShop);
     $('#doorSign').addEventListener('click', function (e) { e.stopPropagation(); });
     $('#doorPanel').addEventListener('click', enterShop);
+
+    var mb = $('#bgmBtn');
+    if (mb) mb.addEventListener('click', toggleMusic);
 
     $('#cartBtn').addEventListener('click', function () { openDrawer(); clickSound(); });
     $('#drawerClose').addEventListener('click', closeDrawer);
@@ -864,6 +922,7 @@
     initNav();
     initDoodle();
     bind();
+    bindAudioState();
   }
 
   if (document.readyState === 'loading') {

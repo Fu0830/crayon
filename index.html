@@ -187,7 +187,6 @@
 
       <div class="memory-wall" id="memoryWall"></div>
 
-      <p class="memory-tip">照片已经放在 <code>assets/memories/</code>，文案在 <code>data.js</code> 的 MEMORIES 里改；空位数量改 <code>ALBUM_SLOTS</code>。</p>
     </section>
 
     <!-- 结账 -->
@@ -287,6 +286,12 @@
 
 <!-- ============ 提示 ============ -->
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<!-- 背景音乐：推门后开始，单曲循环 -->
+<audio id="bgm" src="assets/audio/bgm.mp3" loop preload="auto" playsinline></audio>
+<button class="bgm-btn" id="bgmBtn" type="button" aria-label="背景音乐开关" aria-pressed="true">
+  <span class="bgm-icon" aria-hidden="true">♪</span>
+</button>
 
 <script src="data.js"></script>
 <script src="app.js"></script>

@@ -15,6 +15,11 @@
   --accent: #4f9fe0;
   --accent-deep: #2b6da3;
   --accent-soft: #dbeaf8;
+  --accent-rgb: 79, 159, 224;
+  --sky-mid: #e4f0fa;
+  --bg-1: #edf6ff;
+  --bg-2: #d8eaf9;
+  --bg-3: #c9e0f3;
   --red: #e2606a;
   --yellow: #f2c94c;
   --green: #7bc08a;
@@ -35,6 +40,7 @@ body {
   background: var(--sky);
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
+  transition: background-color .5s ease;
 }
 
 body.locked { overflow: hidden; }
@@ -56,7 +62,7 @@ button { font-family: inherit; cursor: pointer; }
   align-items: center;
   justify-content: center;
   padding: 26px 22px 30px;
-  background: linear-gradient(180deg, #edf6ff 0%, #d8eaf9 55%, #c9e0f3 100%);
+  background: linear-gradient(180deg, var(--bg-1) 0%, var(--bg-2) 55%, var(--bg-3) 100%);
   transition: transform .92s cubic-bezier(.76, 0, .85, .32);
   will-change: transform;
 }
@@ -79,8 +85,8 @@ button { font-family: inherit; cursor: pointer; }
   position: absolute;
   inset: 0;
   background-image:
-    linear-gradient(rgba(79, 159, 224, .09) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(79, 159, 224, .09) 1px, transparent 1px);
+    linear-gradient(rgba(var(--accent-rgb), .09) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(var(--accent-rgb), .09) 1px, transparent 1px);
   background-size: 26px 26px;
   mask-image: radial-gradient(70% 60% at 50% 45%, #000 30%, transparent 85%);
   -webkit-mask-image: radial-gradient(70% 60% at 50% 45%, #000 30%, transparent 85%);
@@ -258,9 +264,9 @@ button { font-family: inherit; cursor: pointer; }
   min-height: 100vh;
   background:
     radial-gradient(90% 55% at 50% 0%, #ffffff 0%, rgba(255, 255, 255, 0) 60%),
-    linear-gradient(rgba(79, 159, 224, .085) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(79, 159, 224, .085) 1px, transparent 1px),
-    linear-gradient(180deg, var(--sky) 0%, #e4f0fa 40%, var(--sky-2) 100%);
+    linear-gradient(rgba(var(--accent-rgb), .085) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(var(--accent-rgb), .085) 1px, transparent 1px),
+    linear-gradient(180deg, var(--sky) 0%, var(--sky-mid) 40%, var(--sky-2) 100%);
   background-size: auto, 26px 26px, 26px 26px, auto;
 }
 
@@ -639,7 +645,7 @@ button { font-family: inherit; cursor: pointer; }
   width: 74px;
   height: 20px;
   transform: translateX(-50%) rotate(-2deg);
-  background: rgba(79, 159, 224, .26);
+  background: rgba(var(--accent-rgb), .26);
   border-left: 1px dashed rgba(255, 255, 255, .6);
   border-right: 1px dashed rgba(255, 255, 255, .6);
 }
@@ -677,7 +683,7 @@ button { font-family: inherit; cursor: pointer; }
   padding: 24px 20px 22px;
   border-radius: 5px;
   background-color: var(--paper);
-  background-image: repeating-linear-gradient(180deg, transparent 0 27px, rgba(79, 159, 224, .09) 27px 28px);
+  background-image: repeating-linear-gradient(180deg, transparent 0 27px, rgba(var(--accent-rgb), .09) 27px 28px);
   box-shadow: 0 8px 20px rgba(43, 109, 163, .1), 0 1px 0 rgba(255, 255, 255, .8) inset;
   border: 1px solid #e7e1cf;
 }
@@ -696,7 +702,7 @@ button { font-family: inherit; cursor: pointer; }
   border-right: 1px dashed rgba(255, 255, 255, .7);
   opacity: .85;
 }
-.tape-blue { background: rgba(79, 159, 224, .3); }
+.tape-blue { background: rgba(var(--accent-rgb), .3); }
 .tape-yellow { background: rgba(242, 201, 76, .42); left: 50%; transform: translateX(-50%) rotate(3deg); }
 .tape-red { background: rgba(226, 96, 106, .26); left: auto; right: 24px; transform: rotate(5deg); }
 
@@ -859,23 +865,10 @@ button { font-family: inherit; cursor: pointer; }
   width: 46px;
   height: 14px;
   transform: translateX(-50%) rotate(-3deg);
-  background: rgba(79, 159, 224, .3);
+  background: rgba(var(--accent-rgb), .3);
   z-index: 2;
 }
 
-.memory-tip {
-  margin: 22px auto 0;
-  max-width: 560px;
-  padding: 12px 16px;
-  border: 1.5px dashed var(--line);
-  border-radius: 12px;
-  font-size: 10px;
-  line-height: 1.9;
-  color: var(--ink-3);
-  text-align: center;
-  background: rgba(255, 255, 255, .6);
-}
-.memory-tip code { font-size: 10px; background: #fff; padding: 1px 5px; border-radius: 4px; color: var(--accent-deep); }
 
 /* ---------------- 结账 ---------------- */
 
@@ -1253,7 +1246,7 @@ button { font-family: inherit; cursor: pointer; }
   height: 13px;
   border-radius: 50%;
   background: var(--accent);
-  box-shadow: 0 0 0 4px rgba(79, 159, 224, .25);
+  box-shadow: 0 0 0 4px rgba(var(--accent-rgb), .25);
   pointer-events: none;
   transition: transform .66s cubic-bezier(.45, .9, .3, 1), opacity .66s ease .12s;
 }
@@ -1325,8 +1318,8 @@ button { font-family: inherit; cursor: pointer; }
   border: 1px solid #e1ecf5;
   background-color: #fdfefe;
   background-image:
-    linear-gradient(rgba(79, 159, 224, .1) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(79, 159, 224, .1) 1px, transparent 1px);
+    linear-gradient(rgba(var(--accent-rgb), .1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(var(--accent-rgb), .1) 1px, transparent 1px);
   background-size: 22px 22px;
 }
 #doodle { display: block; width: 100%; height: 152px; touch-action: none; cursor: crosshair; }
@@ -1361,3 +1354,42 @@ button { font-family: inherit; cursor: pointer; }
 .polaroid.empty .ph::after { display: none; }
 .polaroid.empty .cap b { color: var(--ink-3); }
 .polaroid.empty:hover .ph { border-color: var(--accent); }
+
+
+/* ---------------- 背景音乐按钮 ---------------- */
+.bgm-btn {
+  position: fixed;
+  left: 14px;
+  bottom: 16px;
+  z-index: 70;
+  width: 42px;
+  height: 42px;
+  padding: 0;
+  display: grid;
+  place-items: center;
+  border: 1.5px solid var(--line);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, .82);
+  color: var(--accent-deep);
+  box-shadow: 0 4px 14px rgba(var(--accent-rgb), .22);
+  backdrop-filter: blur(6px);
+  font-size: 17px;
+  line-height: 1;
+  transition: transform .2s, background .3s, color .3s, border-color .3s;
+}
+.bgm-btn:active { transform: scale(.94); }
+.bgm-btn .bgm-icon { display: block; transition: transform .3s; }
+.bgm-btn::after {
+  content: "";
+  position: absolute;
+  width: 22px;
+  height: 2px;
+  background: currentColor;
+  border-radius: 2px;
+  transform: rotate(-38deg) scaleX(0);
+  transition: transform .25s;
+  opacity: .9;
+}
+.bgm-btn.off { color: var(--ink-3); border-color: var(--line); background: rgba(255, 255, 255, .6); }
+.bgm-btn.off::after { transform: rotate(-38deg) scaleX(1); }
+.bgm-btn.off .bgm-icon { opacity: .55; }
