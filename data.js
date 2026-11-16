@@ -12,109 +12,109 @@ const PRODUCTS = [
   {
     id: 'c-box12', name: '十二色蜡笔盒', en: 'BOX OF 12',
     cat: 'crayon', price: 28, art: 'box', color: '#4f9fe0', tag: '店长推荐',
-    desc: '短小、好握，一整页天空刚好够用。盒子有点旧，但每支都还能画。',
+    desc: '12 支，笔杆细，手小的拿着正好。盒子边角有点旧，不影响用。',
     meta: ['12 色', '笔杆 9mm', '无毒 · 可水洗']
   },
   {
     id: 'c-box24', name: '二十四色蜡笔', en: 'BOX OF 24',
     cat: 'crayon', price: 48, art: 'box', color: '#2f7ea8', tag: '最多人拿',
-    desc: '多出来的十二种颜色，其实主要用来画心情。',
+    desc: '比十二色多两支金属色，画在深色纸上更明显。',
     meta: ['24 色', '含金属色 2 支', '附削笔刀']
   },
   {
     id: 'c-blue', name: '天蓝 · 单支', en: 'SKY BLUE',
     cat: 'crayon', price: 6, art: 'crayon', color: '#4f9fe0',
-    desc: '画海，画衬衫，画那条一直没回的消息。',
+    desc: '最常被单买的一支，画完海再画天，很快就短了。',
     meta: ['单支', '可单买', '会变短']
   },
   {
     id: 'c-pink', name: '樱花粉 · 单支', en: 'SAKURA',
     cat: 'crayon', price: 6, art: 'crayon', color: '#ef9bb4',
-    desc: '涂脸颊的时候容易用力过猛，没关系，本来就该脸红。',
+    desc: '偏暖的粉，不荧光，涂在纸上不显廉价。',
     meta: ['单支', '偏暖', '不荧光']
   },
   {
     id: 'c-orange', name: '橘 · 单支', en: 'ORANGE',
     cat: 'crayon', price: 6, art: 'crayon', color: '#f0914b',
-    desc: '傍晚六点的光，和便利店的招牌。',
+    desc: '显色比看着强，涂大面积会掉渣。',
     meta: ['单支', '显色强', '会掉渣']
   },
   {
     id: 'c-green', name: '草绿 · 单支', en: 'GRASS',
     cat: 'crayon', price: 6, art: 'crayon', color: '#69b87e',
-    desc: '画完草地通常会剩半支，然后被借走再也不还。',
+    desc: '偏黄绿，削起来顺，学生最常拿的一支。',
     meta: ['单支', '偏黄绿', '好削']
   },
   {
     id: 'c-ink', name: '夜黑 · 单支', en: 'MIDNIGHT',
     cat: 'crayon', price: 6, art: 'crayon', color: '#2c3b4a',
-    desc: '只用来描边，不用来涂。涂满了就不是夜里，是心事。',
+    desc: '软芯，描边顺手，大面积涂会糊。',
     meta: ['单支', '软芯', '不适合大面积']
   },
   {
     id: 'c-white', name: '云白 · 单支', en: 'CLOUD WHITE',
     cat: 'crayon', price: 6, art: 'crayon', color: '#f7f4ea',
-    desc: '在深色纸上才看得见。像那种说了但等于没说的话。',
+    desc: '覆盖力强，只在深色纸上显色。',
     meta: ['单支', '覆盖力强', '需深色纸']
   },
   {
     id: 'b-grid', name: '方格本 A5', en: 'GRID NOTE',
     cat: 'book', price: 18, art: 'book', color: '#8fb7d8',
-    desc: '一格一个字，写慢了就整齐，写快了就好看。',
+    desc: '96 页，5mm 方格，写字容易对齐。',
     meta: ['A5', '96 页', '5mm 方格']
   },
   {
     id: 'b-ring', name: '线圈本 · 蓝', en: 'SPIRAL',
     cat: 'book', price: 22, art: 'book', color: '#3f83c4', tag: '新到',
-    desc: '可以整页撕下来，也可以整本留着。看你舍不舍得。',
+    desc: 'B5，120 页，页边能整张撕下来，不留毛边。',
     meta: ['B5', '120 页', '可撕']
   },
   {
     id: 'b-memo', name: '便利贴 · 三色', en: 'MEMO PAD',
     cat: 'book', price: 12, art: 'sticker', color: '#f2c94c',
-    desc: '蓝色那叠用来提醒别人，黄色那叠用来提醒自己。',
+    desc: '三叠装，粘性一般，贴在玻璃上会掉。',
     meta: ['3 本装', '76×76mm', '粘性一般']
   },
   {
     id: 's-star', name: '星星贴纸', en: 'STARS',
     cat: 'sticker', price: 9, art: 'sticker', color: '#f2c94c',
-    desc: '一天贴一颗，贴满一行就奖励自己一次早睡。',
+    desc: '42 枚，哑光，撕下来不伤纸。',
     meta: ['42 枚', '哑光', '不伤纸']
   },
   {
     id: 's-duck', name: '小鸭子贴纸', en: 'DUCKS',
     cat: 'sticker', price: 9, art: 'sticker', color: '#f5b74f',
-    desc: '排队的那种。贴在本子角落，像有人在等你翻开。',
+    desc: '18 枚，防水，贴在杯子上也不掉。',
     meta: ['18 枚', '防水', '有黄有白']
   },
   {
     id: 's-cloud', name: '云朵贴纸', en: 'CLOUDS',
     cat: 'sticker', price: 9, art: 'sticker', color: '#9fc7e4',
-    desc: '贴在杯壁上，喝到最后会看到一朵云浮在杯底。',
+    desc: '半透明，贴在杯壁能透过去看到后面。',
     meta: ['24 枚', '半透明', '遇水不掉']
   },
   {
     id: 't-eraser', name: '云朵橡皮', en: 'ERASER',
     cat: 'tool', price: 8, art: 'eraser', color: '#b9d6ea',
-    desc: '擦得干净，但擦不掉说错的话。',
+    desc: '擦得干净，不留黑印，用久了会缩一圈。',
     meta: ['1 块', '不留痕', '会变小']
   },
   {
     id: 't-pencil', name: '自动铅笔 0.5', en: 'MECHANICAL',
     cat: 'tool', price: 15, art: 'pen', color: '#4f9fe0',
-    desc: '写字很轻，适合在本子边缘写不打算给人看的字。',
+    desc: '0.5mm，重心低，附带两根铅芯。',
     meta: ['0.5mm', '低重心', '附 2 根铅芯']
   },
   {
     id: 't-marker', name: '荧光笔 · 三支', en: 'HIGHLIGHTERS',
     cat: 'tool', price: 19, art: 'pen', color: '#7fc7c3',
-    desc: '蓝、黄、粉。划重点的时候别把整页都划了。',
+    desc: '三支一套，快干，不透到背面。',
     meta: ['3 支装', '快干', '不渗透']
   },
   {
     id: 't-pouch', name: '帆布笔袋', en: 'POUCH',
     cat: 'tool', price: 32, art: 'pouch', color: '#4f86b2', tag: '耐脏',
-    desc: '装得下所有笔，也装得下几颗不打算用的糖。',
+    desc: '20×9cm，厚帆布，拉链能拉到底。',
     meta: ['20×9cm', '厚帆布', '拉链式']
   }
 ];
@@ -230,9 +230,9 @@ const PALETTES = [
 
 /* 小票上那句手写的实话（每次随机） */
 const RECEIPT_NOTES = [
-  '不用谢，下次别迟到就行。',
-  '钱记在我账本上了，你不用掏。',
-  '你挑的那几支，我都削好了。',
-  '这单不算模板，是我现写的。',
-  '小票撕了没关系，别把话说一半就走。'
+  '那本角上有点压痕，已经给你换过一本了。',
+  '钱不收，账我记在纸上。',
+  '拿的这几支都试过，能画。',
+  '下次早点来，早上店里人少。',
+  '东西拿走就行，不用客气。'
 ];

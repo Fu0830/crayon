@@ -396,7 +396,7 @@
     bumpBadge();
     if (triggerEl) flyDot(triggerEl);
     ding();
-    toast('「' + p.name + '」放进购物车了');
+    toast('「' + p.name + '」放进车里了');
   }
 
   function changeQty(id, delta) {
@@ -415,7 +415,7 @@
     saveCart();
     renderCart();
     renderProducts();
-    toast('已经放回去了');
+    toast('拿出来了，放回车上');
   }
 
   function cartCount() {
@@ -440,7 +440,7 @@
     if (!cart.length) {
       body.innerHTML = '<div class="drawer-empty">' +
         '<div class="de-icon">' + artCrayon('#b9d3e8') + '</div>' +
-        '<p>购物车是空的。<br>没关系，先看看也行。</p>' +
+        '<p>购物车空的。<br>架子上还有十八件。</p>' +
         '<button class="ghost-btn" data-goshop="1">去 挑 东 西</button></div>';
     } else {
       body.innerHTML = cart.map(function (i) {
@@ -542,7 +542,7 @@
     try { localStorage.setItem(KEY_READ, on ? '1' : '0'); } catch (e) {}
     if (!silent && on) {
       ding();
-      toast('记住了就好，别踩。');
+      toast('记下了。');
     }
   }
 
@@ -563,7 +563,7 @@
       '<circle cx="60" cy="65" r="11" fill="none" stroke="#b7d2e6" stroke-width="2"/>' +
       '<path d="' + STAR + '" transform="translate(92 40) scale(7)" fill="#d9e8f4"/>' +
       '</svg></span>' +
-      '<span class="cap"><b>空位 ' + n + '</b>还没有照片<br><span>等你放一张进来</span></span>' +
+      '<span class="cap"><b>空位 ' + n + '</b>还没有照片<br><span>位置先留着</span></span>' +
       '</button>';
   }
 
@@ -588,7 +588,7 @@
       var b = e.target.closest('.polaroid');
       if (!b) return;
       if (b.dataset.mem) openLightbox(b.dataset.mem);
-      else toast('空位 ' + b.dataset.empty + '：还空着，等一张照片');
+      else toast('空位 ' + b.dataset.empty + '：这个位置还是空的。');
     });
   }
 
@@ -600,7 +600,7 @@
     $('#lbTitle').textContent = m.title;
     $('#lbText').innerHTML = (m.front || m.back)
       ? '<span class="lb-front">' + m.front + '</span><br><br>' + m.back
-      : '<span class="lb-front">这张的背面还没写，等你补一句。</span>';
+      : '<span class="lb-front">这张的文字还没写。</span>';
     $('#lbMeta').textContent = (m.date ? m.date + ' · ' : '') + 'NO. ' + id.toUpperCase();
     $('#lightbox').classList.add('show');
     $('#lightbox').setAttribute('aria-hidden', 'false');
@@ -634,7 +634,7 @@
     }
     var note = RECEIPT_NOTES[Math.floor(Math.random() * RECEIPT_NOTES.length)];
     $('#rcNote').textContent = note;
-    $('#rcPay').textContent = cart.length ? '已记在账本' : '未结';
+    $('#rcPay').textContent = cart.length ? '记账（本店）' : '未结';
   }
 
   function printReceipt() {
@@ -646,7 +646,7 @@
     printed = true;
     $('#afterPrint').classList.add('show');
     $('#printBtn').textContent = '再 打 一 张';
-    $('#checkoutTip').textContent = '小票已经打出来了，可以撕下来了。';
+    $('#checkoutTip').textContent = '小票打出来了，可以撕下来。';
     clickSound();
     setTimeout(function () { tone(520, .08, .02, 'square', .2); }, 60);
     toast('小票打好了');
@@ -782,7 +782,7 @@
     });
 
     $('#toCheckout').addEventListener('click', function () {
-      if (!cart.length) { toast('购物车还是空的。'); return; }
+      if (!cart.length) { toast('购物车是空的。'); return; }
       closeDrawer();
       setTimeout(function () {
         document.getElementById('checkout').scrollIntoView({ behavior: 'smooth' });
@@ -828,7 +828,7 @@
     $('#checkBtn').addEventListener('click', function () {
       var on = this.getAttribute('aria-pressed') !== 'true';
       setRead(on);
-      if (!on) toast('那就再读一遍吧。');
+      if (!on) toast('没勾选，就不算看过。');
     });
 
     $('#printBtn').addEventListener('click', printReceipt);

@@ -33,14 +33,14 @@
 
   <div class="cover-copy">
     <h1>推 门</h1>
-    <p class="cover-lede">灯还亮着，蜡笔都削好了。<br>进来随便看，不买也没关系。</p>
+    <p class="cover-lede">店门没锁，推开就行。<br>架子上十八件，自己拿，最后一起算。</p>
   </div>
 
   <button class="enter-btn" id="enterBtn">
     <span>推 门 进 店</span>
     <i aria-hidden="true"></i>
   </button>
-  <p class="cover-foot">营业中 · 00:00 — 打烊（一般不关）</p>
+  <p class="cover-foot">营业中 · 00:00 起，全天开着</p>
 </div>
 
 <!-- ============ 店铺 ============ -->
@@ -74,7 +74,7 @@
       <div class="hero-inner">
         <p class="eyebrow">OPEN · 蓝色小屋</p>
         <h2 class="hero-title">今 天 想 画 点 什 么</h2>
-        <p class="hero-sub">蜡笔按颜色分柜，本子按厚度分堆。<br>购物车在右上角，什么时候放进去都行。</p>
+        <p class="hero-sub">蜡笔按颜色分柜，本子按厚度分堆。<br>要买的点「加入」，右上角车里会记着。</p>
 
         <div class="palette-widget">
           <div class="pw-head">
@@ -82,7 +82,7 @@
             <em id="paletteName">天蓝</em>
           </div>
           <div class="pw-swatches" id="paletteSwatches"></div>
-          <p class="pw-tip">点一下，整间店的蓝色会跟着变。</p>
+          <p class="pw-tip">点一支换色，全站立刻跟着换。</p>
         </div>
 
         <div class="hero-stats">
@@ -98,9 +98,9 @@
           </div>
           <div class="doodle-wrap">
             <canvas id="doodle" aria-label="涂画区"></canvas>
-            <span class="doodle-hint" id="doodleHint">用当前这支蜡笔，随手画两笔</span>
+            <span class="doodle-hint" id="doodleHint">用这支蜡笔在这块纸上画，画错按擦掉。</span>
           </div>
-          <p class="doodle-foot">画完不用擦，反正没人检查。</p>
+          <p class="doodle-foot">画的东西不会自己消失，想擦就按擦掉。</p>
         </div>
       </div>
     </section>
@@ -110,7 +110,7 @@
       <div class="section-head">
         <p class="eyebrow">01 / SHOP</p>
         <h2 class="section-title">挑 东 西</h2>
-        <p class="section-sub">「这支我先拿着，等下一起算。」</p>
+        <p class="section-sub">挑中的先放车里，最后一起算。</p>
       </div>
 
       <div class="filter-bar">
@@ -133,7 +133,7 @@
       <div class="section-head">
         <p class="eyebrow">02 / NOTICE</p>
         <h2 class="section-title">个 人 须 知</h2>
-        <p class="section-sub">读一遍，能省掉很多不痛快。</p>
+        <p class="section-sub">下面三段分别是规矩、喜点和雷点，看完再点单。</p>
       </div>
 
       <div class="idcard">
@@ -144,7 +144,7 @@
             <span>天蝎座</span><span>永远 18</span>
           </div>
         </div>
-        <p class="idcard-now">当前状态：<b id="idStatus">在店里，等人推门</b></p>
+        <p class="idcard-now">当前状态：<b id="idStatus">在店里，可以点单</b></p>
       </div>
 
       <div class="notice-board">
@@ -164,7 +164,7 @@
           <span class="tape tape-red" aria-hidden="true"></span>
           <h3><span class="dot dot-red" aria-hidden="true"></span>雷点 <i>NO</i></h3>
           <ol class="rule-list" id="hateList"></ol>
-          <p class="note-foot">踩了不会立刻翻脸，但会记很久。</p>
+          <p class="note-foot">上面这几条，我确实会介意。</p>
         </article>
       </div>
 
@@ -182,7 +182,7 @@
       <div class="section-head">
         <p class="eyebrow">03 / MEMORIES</p>
         <h2 class="section-title">回 忆 陈 列</h2>
-        <p class="section-sub">相册里留了 12 个位置，先钉上 11 张。文字都还空着，等你来写。</p>
+        <p class="section-sub">相册 12 个位置，已经放进去 11 张。每张下面的字还没写。</p>
       </div>
 
       <div class="memory-wall" id="memoryWall"></div>
@@ -195,7 +195,7 @@
       <div class="section-head">
         <p class="eyebrow">04 / CHECKOUT</p>
         <h2 class="section-title">结 账</h2>
-        <p class="section-sub">小票会写你买了什么，也会写一句给钱的实话。</p>
+        <p class="section-sub">打印出来是刚才挑的东西，可以撕下来收着。</p>
       </div>
 
       <div class="printer-wrap">
@@ -214,8 +214,8 @@
               <div class="rc-items" id="rcItems"></div>
               <div class="rc-total"><span>合计</span><b id="rcTotal">¥ 0.00</b></div>
               <div class="rc-pay">
-                <p><span>支付</span><b id="rcPay">—</b></p>
-                <p><span>找回</span><b>一句真话</b></p>
+                <p><span>付款</span><b id="rcPay">—</b></p>
+                <p><span>找零</span><b>¥ 0.00</b></p>
               </div>
               <p class="rc-note" id="rcNote">—</p>
               <div class="rc-barcode" aria-hidden="true"></div>
@@ -227,7 +227,7 @@
 
         <div class="checkout-actions">
           <button class="cta-btn" id="printBtn" disabled>打 印 小 票</button>
-          <p class="checkout-tip" id="checkoutTip">购物车是空的，先去挑几支。</p>
+          <p class="checkout-tip" id="checkoutTip">购物车空的，先去挑几件。</p>
           <div class="after-print" id="afterPrint" aria-hidden="true">
             <button class="ghost-btn" id="tearBtn">撕 下 小 票</button>
             <a class="ghost-btn" href="#shop">再 逛 逛</a>
@@ -239,7 +239,7 @@
     <footer class="site-foot">
       <p class="foot-sign">CRAYON STATIONERY · 蜡笔文具店</p>
       <p class="foot-note">本站为个人主页，非真实商铺，不发货，不收款。</p>
-      <p class="foot-note">Made with 24 crayons and 0 sleep.</p>
+      <p class="foot-note">24 支蜡笔，别的没有了。</p>
     </footer>
   </main>
 </div>
@@ -255,7 +255,7 @@
   <div class="drawer-foot">
     <div class="drawer-total"><span>合计</span><b id="drawerTotal">¥ 0.00</b></div>
     <button class="cta-btn" id="toCheckout">去 结 账</button>
-    <p class="drawer-hint">不买也行，放着也不会过期。</p>
+    <p class="drawer-hint">加进来的东西会一直留在车里。</p>
   </div>
 </aside>
 
