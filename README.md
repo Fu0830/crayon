@@ -2,6 +2,10 @@
 
 一个蓝色系的个人主页，伪装成一间小文具店。纯静态站点（HTML + CSS + 原生 JS），**不需要服务器、不需要安装任何东西**，丢到 GitHub Pages 就能拿到公开链接。
 
+**线上地址：** https://fu0830.github.io/crayon-shop/
+
+> 仓库：https://github.com/Fu0830/crayon-shop （Public，Pages 发布分支 main / root）
+
 ## 页面结构
 
 | 顺序 | 模块 | 交互 |
@@ -50,7 +54,7 @@ img: 'assets/memories/01.jpg',
 ### 方式一：网页上传（不用装 Git）
 
 1. 在 GitHub 新建仓库，名字随意（比如 `crayon-shop`），**Public**，不要勾选 README。
-2. 进入仓库 → `Add file` → `Upload files`，把本项目里的 `index.html`、`style.css`、`data.js`、`app.js` **全部传进去**（注意保留文件夹结构，不要只传 index.html）。
+2. 进入仓库 → `Add file` → `Upload files`，把本项目里的 `index.html`、`style.css`、`data.js`、`app.js` **全部传进去**（四个文件都在根目录，别只传 index.html）。
 3. `Commit changes`。
 4. 仓库 → `Settings` → 左侧 `Pages` → Source 选 `Deploy from a branch`，Branch 选 `main` / `(root)`，`Save`。
 5. 等 1–2 分钟，链接就是：`https://你的用户名.github.io/仓库名/`
