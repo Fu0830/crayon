@@ -2,9 +2,9 @@
 
 一个蓝色系的个人主页，伪装成一间小文具店。纯静态站点（HTML + CSS + 原生 JS），**不需要服务器、不需要安装任何东西**，丢到 GitHub Pages 就能拿到公开链接。
 
-**线上地址：** https://fu0830.github.io/crayon-shop/
+**线上地址：** https://fu0830.github.io/crayon/
 
-> 仓库：https://github.com/Fu0830/crayon-shop （Public，Pages 发布分支 main / root）
+> 仓库：https://github.com/Fu0830/crayon （Public，Pages 发布分支 main / root）
 
 ## 页面结构
 
