@@ -334,7 +334,6 @@
     root.style.setProperty('--bg-1', p.bg1);
     root.style.setProperty('--bg-2', p.bg2);
     root.style.setProperty('--bg-3', p.bg3);
-    root.style.setProperty('--font', p.font);
     $('#paletteName').textContent = p.name;
     $$('.swatch').forEach(function (b, idx) {
       b.classList.toggle('on', idx === accentIndex);

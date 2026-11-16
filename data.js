@@ -224,32 +224,27 @@ const PALETTES = [
   {
     name: '天蓝', hex: '#4f9fe0', deep: '#2b6da3', soft: '#dbeaf8', rgb: '79, 159, 224',
     sky: '#eaf3fc', sky2: '#dbeaf7', skyMid: '#e4f0fa',
-    bg1: '#edf6ff', bg2: '#d8eaf9', bg3: '#c9e0f3',
-    font: '"PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans SC", system-ui, sans-serif'
+    bg1: '#edf6ff', bg2: '#d8eaf9', bg3: '#c9e0f3'
   },
   {
     name: '雾蓝', hex: '#6f93ad', deep: '#47647b', soft: '#e3ecf2', rgb: '111, 147, 173',
     sky: '#f2f6f9', sky2: '#e4ecf1', skyMid: '#eef3f6',
-    bg1: '#f9fbfd', bg2: '#e9f0f4', bg3: '#dbe4ea',
-    font: '"Songti SC", "Noto Serif SC", "SimSun", "Times New Roman", serif'
+    bg1: '#f9fbfd', bg2: '#e9f0f4', bg3: '#dbe4ea'
   },
   {
     name: '湖蓝', hex: '#2f8fa8', deep: '#1d6275', soft: '#d6edf0', rgb: '47, 143, 168',
     sky: '#e9f6f6', sky2: '#d6eced', skyMid: '#e3f2f3',
-    bg1: '#f1fbfb', bg2: '#dcf1f2', bg3: '#cbe6e9',
-    font: '"Yuanti SC", "Hiragino Maru Gothic ProN", "Quicksand", "Noto Sans SC", system-ui, sans-serif'
+    bg1: '#f1fbfb', bg2: '#dcf1f2', bg3: '#cbe6e9'
   },
   {
     name: '夜蓝', hex: '#3c5f8a', deep: '#22385c', soft: '#dfe6f1', rgb: '60, 95, 138',
     sky: '#e8ecf3', sky2: '#d8dfea', skyMid: '#e3e8f1',
-    bg1: '#f2f5fa', bg2: '#e1e7f0', bg3: '#d3dbe7',
-    font: '"Kaiti SC", "STKaiti", "KaiTi", "Songti SC", serif'
+    bg1: '#f2f5fa', bg2: '#e1e7f0', bg3: '#d3dbe7'
   },
   {
     name: '奶油蓝', hex: '#8fbcd9', deep: '#5f8aa5', soft: '#eaf3f9', rgb: '143, 188, 217',
     sky: '#f5f9fc', sky2: '#e8f0f6', skyMid: '#f0f6fa',
-    bg1: '#fbfdfe', bg2: '#eff5f9', bg3: '#e3ecf3',
-    font: '"FangSong", "STFangsong", "Songti SC", "Noto Serif SC", serif'
+    bg1: '#fbfdfe', bg2: '#eff5f9', bg3: '#e3ecf3'
   }
 ];
 
