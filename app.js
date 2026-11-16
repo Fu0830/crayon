@@ -575,8 +575,9 @@
       if (m) {
         out += '<button class="polaroid" data-mem="' + m.id + '" style="--rot:' + ROTS[i % ROTS.length] + '">' +
           '<span class="ptape" aria-hidden="true"></span>' +
-          '<span class="ph">' + (m.img ? '<img src="' + m.img + '" alt="' + m.title + '">' : memArt(m.art, m.color)) + '</span>' +
-          '<span class="cap"><b>' + m.title + '</b>' + m.front + '<br><span>' + m.date + '</span></span>' +
+          '<span class="ph' + (m.img ? ' has-img' : '') + '">' + (m.img ? '<img src="' + m.img + '" alt="照片 ' + (i + 1) + '">' : memArt(m.art, m.color)) + '</span>' +
+          '<span class="cap"><b>' + m.title + '</b>' + m.front +
+          (m.date ? '<br><span>' + m.date + '</span>' : '') + '</span>' +
           '</button>';
       } else {
         out += emptyCard(i);
@@ -587,17 +588,20 @@
       var b = e.target.closest('.polaroid');
       if (!b) return;
       if (b.dataset.mem) openLightbox(b.dataset.mem);
-      else toast('空位 ' + b.dataset.empty + '：把照片放进 assets/memories/ 再加一行 img 就填上了');
+      else toast('空位 ' + b.dataset.empty + '：还空着，等一张照片');
     });
   }
 
   function openLightbox(id) {
     var m = MEMORIES.filter(function (x) { return x.id === id; })[0];
     if (!m) return;
-    $('#lbPhoto').innerHTML = m.img ? '<img src="' + m.img + '" alt="' + m.title + '">' : memArt(m.art, m.color);
+    $('#lbPhoto').className = 'lb-photo' + (m.img ? '' : ' no-img');
+    $('#lbPhoto').innerHTML = m.img ? '<img src="' + m.img + '" alt="照片">' : memArt(m.art, m.color);
     $('#lbTitle').textContent = m.title;
-    $('#lbText').innerHTML = '<span class="lb-front">' + m.front + '</span><br><br>' + m.back;
-    $('#lbMeta').textContent = m.date + ' · NO. ' + id.toUpperCase();
+    $('#lbText').innerHTML = (m.front || m.back)
+      ? '<span class="lb-front">' + m.front + '</span><br><br>' + m.back
+      : '<span class="lb-front">这张的背面还没写，等你补一句。</span>';
+    $('#lbMeta').textContent = (m.date ? m.date + ' · ' : '') + 'NO. ' + id.toUpperCase();
     $('#lightbox').classList.add('show');
     $('#lightbox').setAttribute('aria-hidden', 'false');
     document.body.classList.add('locked');

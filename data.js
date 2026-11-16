@@ -149,40 +149,70 @@ const NOTICE = {
 /* 回忆陈列（把 assets/memories/01.jpg … 换成自己的照片即可） */
 const MEMORIES = [
   {
-    id: 'm1', title: '开 局 那 一 把', date: '2025 · 冬',
-    art: 'moon', color: '#3f83c4',
-    front: '第一次连麦，你说话比游戏声音还轻。',
-    back: '你说「别紧张，先跟着我」。我真的跟着了，然后输了三局。你笑得很开心，我就没提换人的事。'
+    id: 'm1',
+    title: '待填写', date: '',
+    front: '', back: '',
+    img: 'assets/memories/01.jpg'
   },
   {
-    id: 'm2', title: '凌 晨 三 点', date: '2025 · 冬',
-    art: 'mic', color: '#7fa8c9',
-    front: '语音挂上以后谁也没说话，但都没挂。',
-    back: '你那边有电风扇的声音。我问你困不困，你说不困。后来我先睡着了，第二天你说我打呼。'
+    id: 'm2',
+    title: '待填写', date: '',
+    front: '', back: '',
+    img: 'assets/memories/02.jpg'
   },
   {
-    id: 'm3', title: '你 夸 我 那 次', date: '2026 · 春',
-    art: 'star', color: '#f2c94c',
-    front: '「这波打得不错。」就五个字。',
-    back: '我把那句话存下来了。后来每次打得不好，我都拿出来看一遍。'
+    id: 'm3',
+    title: '待填写', date: '',
+    front: '', back: '',
+    img: 'assets/memories/03.jpg'
   },
   {
-    id: 'm4', title: '连 胜 的 下 午', date: '2026 · 夏',
-    art: 'pad', color: '#69b87e',
-    front: '一直赢，赢到我们都不好意思了。',
-    back: '你说再赢一局就收，结果赢到天黑。那天我第一次觉得，赢不赢其实无所谓。'
+    id: 'm4',
+    title: '待填写', date: '',
+    front: '', back: '',
+    img: 'assets/memories/04.jpg'
   },
   {
-    id: 'm5', title: '小 窝 第 一 条', date: '2026 · 秋',
-    art: 'cup', color: '#ef9bb4',
-    front: '「在吗？」——你发的第一个字。',
-    back: '我回了「在」。后来那条消息被顶到很下面，我没舍得删。'
+    id: 'm5',
+    title: '待填写', date: '',
+    front: '', back: '',
+    img: 'assets/memories/05.jpg'
   },
   {
-    id: 'm6', title: '一 支 用 完 的 蜡 笔', date: '2026 · 冬',
-    art: 'crayon', color: '#2f7ea8',
-    front: '天蓝那支先没了，因为天空画得最多。',
-    back: '你说下次给我买一盒新的。我记到现在，还没买。'
+    id: 'm6',
+    title: '待填写', date: '',
+    front: '', back: '',
+    img: 'assets/memories/06.jpg'
+  },
+  {
+    id: 'm7',
+    title: '待填写', date: '',
+    front: '', back: '',
+    img: 'assets/memories/07.jpg'
+  },
+  {
+    id: 'm8',
+    title: '待填写', date: '',
+    front: '', back: '',
+    img: 'assets/memories/08.jpg'
+  },
+  {
+    id: 'm9',
+    title: '待填写', date: '',
+    front: '', back: '',
+    img: 'assets/memories/09.jpg'
+  },
+  {
+    id: 'm10',
+    title: '待填写', date: '',
+    front: '', back: '',
+    img: 'assets/memories/10.jpg'
+  },
+  {
+    id: 'm11',
+    title: '待填写', date: '',
+    front: '', back: '',
+    img: 'assets/memories/11.jpg'
   }
 ];
 
